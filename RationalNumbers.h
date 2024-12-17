@@ -24,7 +24,7 @@ public:
     int GetDenominator() const{
         return denominator;
     }
-    void Print() {
+    void Print() const {
         cout << numerator << "/" << denominator << " ";
     }
     void Sum(const RationalNumbers number);

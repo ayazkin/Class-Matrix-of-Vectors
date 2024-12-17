@@ -3,9 +3,9 @@
 Vector_Rational::Vector_Rational(int s) : size(s) 
 {
     mas = new RationalNumbers[s];
-    for (int i = 0; i < size; ++i) {
-        mas[i] = RationalNumbers(0, 1);
-    }
+    //for (int i = 0; i < size; ++i) { // Нужно убрать из программы?(Проверить в конце).
+    //    mas[i] = RationalNumbers(0, 1);
+    //}
 }
 
 RationalNumbers& Vector_Rational::operator[](int index) 
@@ -32,6 +32,15 @@ Vector_Rational Vector_Rational::operator/(RationalNumbers number) const
     Vector_Rational result(size);
     for (int i = 0; i < size; ++i) {
         result.mas[i] = mas[i] / number; // сделать перегрузку деления
+    }
+    return result;
+}
+
+Vector_Rational Vector_Rational::operator*(RationalNumbers number) const
+{
+    Vector_Rational result(size);
+    for (int i = 0; i < size; ++i) {
+        result.mas[i] = mas[i] * number; 
     }
     return result;
 }

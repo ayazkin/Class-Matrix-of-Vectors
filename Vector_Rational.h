@@ -23,6 +23,8 @@ public:
 
 	Vector_Rational operator/(RationalNumbers number) const;
 
+	Vector_Rational operator*(RationalNumbers number) const;
+
 	~Vector_Rational() { /////////////
 		delete[] mas;
 	}
